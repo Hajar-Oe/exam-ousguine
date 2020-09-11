@@ -14,6 +14,22 @@
     .carousel-caption{
       color: black !important;
       }
+      .slides{
+        height: 500px;
+      }
+      .page-footer{
+        width: 100%;
+        background: #191919; 
+        color: #777;
+      }
+    .page-footer a { color: #aaa; }
+    .page-footer a:hover { color: #fff; }
+      .mapouter{position:relative;text-align:right;height:358px;width:508px;}
+      .gmap_canvas {overflow:hidden;background:none!important;height:358px;width:508px;}
+      .stretched-link{
+        text-decoration: none;
+        font-size: 1.25rem;
+      }
     </style>
 </head>
 <body>
@@ -68,8 +84,91 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-    </div>
+
+          <!--Personnal Infos-->
+
+          <div class="h-2 d-flex justify-content-around mt-4 ml-1 mr-1 p-1" id="infos">
+            <div class="card col-md-3 pt-1 pb-1 text-center border border-dark">
+             <img class="card-img img-fluid" src="./images/my_pic.jpg" alt="Personal Picture">
+           </div>
+           <div class="card card col-md-8 border border-dark ml-1" >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Name: Hajar Ousguine</li>
+              <li class="list-group-item">Age: 20</li>
+              <li class="list-group-item">City: Salé</li>
+              <li class="list-group-item">Country: Morocco</li>
+            </ul>
+          </div>
+         </div>
+         <!--Skills-->
+         <div class="row h-50 justify-content-around mt-3">
+          <div class="card col-lg-3 m-1">
+            <div class="card-body">
+              <h5 class="card-title">Team Work</h5>
+              <p class="card-text">Working in a team can be a struggle for others, but it's fine with me i try to make the best of it</p>
+            </div>
+          </div>
+          <div class="card col-lg-3">
+            <div class="card-body">
+              <h5 class="card-title ">Web Developement</h5>
+              <p class="card-text">I really enjoy Web Developpement, it sparks the creativity inside of you</p>
+            </div>
+          </div>
+          <div class="card col-lg-3">
+            <div class="card-body">
+              <h5 class="card-title ">Autonomy</h5>
+              <p class="card-text">As much as i like Working in teams i also enjoy working alone and making decisions</p>
+            </div>
+          </div>
+        </div>
+        <!--Video for hobbies-->
+          <div class="container-fluid mt-3 border d-flex justify-content-center pt-3 pb-3 mb-3">
+        <div class="embed-responsive embed-responsive-16by9 col-md-5 float-left mr-2">
+          <iframe src="https://www.youtube.com/embed/xqilZRsp12s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 col-md-5 float-right"> 
+          <iframe src="https://www.youtube.com/embed/mbCJqdrzwcE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+        </div>
+        </div>
+        <div class="row mt-3 border d-flex justify-content-center pt-3 pb-3 mb-3">
+            <div class="col-md-5 float-left mr-2 mapouter">
+              <div class="gmap_canvas"><iframe width="508" height="358" id="gmap_canvas" src="https://maps.google.com/maps?q=Morocco%20Sal%C3%A9%20hors%20bab%20sebta%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+               </div>
+            </div>
+            <div class="col-md-5 float-right">
+            <form>
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email">
+                <small  class="form-text text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="Objet">Objet</label>
+                <input type="text" class="form-control" id="Objet">
+                <!--small  class="form-text text-muted"></small-->
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="message" rows="3"></textarea>
+                 <small  class="form-text text-muted"></small>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+            </div>
+          </div>
+        </div>
+
+        <!--Liens-->
+        <div class="container-fluid page-footer mt-3 pt-2 pb-2 pl-3 pr-3 d-flex jutify-content-around">
+          <div class="h-10 order-sm-first" >
+            <h5 class="text-uppercase text-center">My social Media</h5><br>
+            <a href="https://www.instagram.com/hajar_oe/" class="stretched-link">hajar_oe</a>
+            <a href="https://www.youtube.com/channel/UC3nUpo00ZH6pFp_c9QCvy3A?view_as=subscriber" class="stretched-link">hajar ousguine</a>
+            <a href="https://www.linkedin.com/in/hajar-ousguine-59181817b" class="stretched-link">Hajar Ousguine</a>
+            <br>
+          </div>
+      </div>
 <!--JQuery Libraries-->    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZvskGVNt3PPaMMpN5qXQeRwxfjn7qHuM&callback=initMap" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
